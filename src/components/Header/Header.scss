@@ -1,0 +1,31 @@
+:local{
+  .header{
+    margin: 20px 0;
+    &__icon {
+      float: left;
+    }
+    &__search {
+      float: right;
+      width: 260px;
+    }
+    &__navbar {
+      position: absolute;
+      left: 0;
+      right: 0;
+      text-align: center;
+      li {
+        display: inline-block;
+        padding: 8px 10px;
+        a {
+          color: #5e5e5e;
+          text-transform: uppercase;
+          font-weight: bold;
+          &:hover{
+            text-decoration: none;
+            color: #000;
+          }
+        }
+      }
+    }
+  }
+}
