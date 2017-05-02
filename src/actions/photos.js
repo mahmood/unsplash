@@ -4,6 +4,7 @@ import axios from 'axios';
 const clientId = 'bb09aa87e9f9340f1d5537f4f4c5649c1bd9c456d055b12fd76629cecceaa73a';
 const clientId2 = 'bbd9a8b273051e131270739a60032859d43abf7d44b4865cefae2d2c586487a0';
 
+// https://api.unsplash.com/search/photos?page=1&query=car&client_id=bbd9a8b273051e131270739a60032859d43abf7d44b4865cefae2d2c586487a0
 export function fetchPhoto(){
   return function(dispatch) {
     axios.get(`https://api.unsplash.com/photos/?page=1&per_page=9&client_id=${clientId}`)
@@ -29,8 +30,9 @@ export function loadMore(pageId = 1) {
 
 export function search(term) {
   return dispatch => {
-    axios.get(`https://api.unsplash.com/photos/?page=1&per_page=9&query=${term}&client_id=${clientId}`).then(response => {
-      dispatch({ type: SEARCH, term: response.data });
+    axios.get(`https://api.unsplash.com/search/photos/?page=1&query=${term}&client_id=${clientId}`).then(response => {
+      console.log(response.data);
+      dispatch({ type: SEARCH, data: response.data });
     }).catch(error => {
       console.error(error);
     });
