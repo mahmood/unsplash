@@ -1,4 +1,4 @@
-import { FETCH_PHOTO, LOAD_MORE, SEARCH } from '../actions/types';
+import { FETCH_PHOTO, LOAD_MORE, SEARCH, RANDOM_IMAGE } from '../actions/types';
 
 export default function (state = [], action) {
   switch(action.type){
@@ -8,6 +8,8 @@ export default function (state = [], action) {
       return {...state, photos: state.photos.concat(action.data) };
     case SEARCH :
       return {...state, photos: action.data.results};
+    case RANDOM_IMAGE :
+      return {...state, random: [action] };
     default:
       return state;
   }

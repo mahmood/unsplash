@@ -1,4 +1,4 @@
-import { FETCH_PHOTO, LOAD_MORE, SEARCH } from './types.js';
+import { FETCH_PHOTO, LOAD_MORE, SEARCH, RANDOM_IMAGE } from './types.js';
 import axios from 'axios';
 
 const clientId = 'bb09aa87e9f9340f1d5537f4f4c5649c1bd9c456d055b12fd76629cecceaa73a';
@@ -30,9 +30,21 @@ export function loadMore(pageId = 1) {
 
 export function search(term) {
   return dispatch => {
-    axios.get(`https://api.unsplash.com/search/photos/?page=1&query=${term}&client_id=${clientId}`).then(response => {
+    axios.get(`https://api.unsplash.com/search/photos/?page=1&per_page=9&query=${term}&client_id=${clientId}`)
+    .then(response => {
       console.log(response.data);
       dispatch({ type: SEARCH, data: response.data });
+    }).catch(error => {
+      console.error(error);
+    });
+  };
+}
+
+export function getRandom() {
+  return dispatch => {
+    axios.get(`https://api.unsplash.com/photos/random?client_id=${clientId}`)
+    .then(response => {
+      dispatch({ type: RANDOM_IMAGE, data: response.data });
     }).catch(error => {
       console.error(error);
     });
