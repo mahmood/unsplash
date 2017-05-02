@@ -41,6 +41,7 @@ class Header extends Component {
           <FontAwesome styleName="header__icon" size="2x" name="camera"/>
             <div styleName="header__search">
                 <input className="form-control" value={this.state.term}
+                placeholder="search"
                 onKeyDown={this._handleChange}
                 onChange={this._handleChange}/>
             </div>
