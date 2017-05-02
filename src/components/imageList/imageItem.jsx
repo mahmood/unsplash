@@ -7,7 +7,7 @@ import styles from './imageList.scss';
 
 class ImageItem extends Component {
   render() {
-    const {id, urls, user, likes} = this.props.item;
+    const { urls, user, likes } = this.props.item;
     return (
         <Col sm={12} md={4}>
           <div styleName="imageWrapper">
@@ -23,7 +23,7 @@ class ImageItem extends Component {
           </div>
           {user.name}
         </Col>
-    )
+    );
   }
 }
 

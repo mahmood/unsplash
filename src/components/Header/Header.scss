@@ -1,5 +1,9 @@
 :local{
   .header{
+    .searchBar{
+      position: relative;
+      z-index: 99;
+    }
     margin: 20px 0;
     &__icon {
       float: left;

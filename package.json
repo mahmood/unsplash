@@ -32,6 +32,7 @@
   "dependencies": {
     "axios": "^0.16.1",
     "fbjs": "^0.8.12",
+    "lodash": "^4.17.4",
     "object-assign": "4.1.0",
     "react": "^15.5.4",
     "react-bootstrap": "^0.30.10",
