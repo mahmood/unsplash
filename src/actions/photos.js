@@ -2,7 +2,7 @@ import { FETCH_PHOTO, LOAD_MORE, SEARCH, RANDOM_IMAGE, LOADING_PHOTO, FETCH_PHOT
 import axios from 'axios';
 
 const clientId = 'bb09aa87e9f9340f1d5537f4f4c5649c1bd9c456d055b12fd76629cecceaa73a';
-const clientId2 = 'bbd9a8b273051e131270739a60032859d43abf7d44b4865cefae2d2c586487a0';
+// const clientId = 'bbd9a8b273051e131270739a60032859d43abf7d44b4865cefae2d2c586487a0';
 
 // https://api.unsplash.com/search/photos?page=1&query=car&client_id=bbd9a8b273051e131270739a60032859d43abf7d44b4865cefae2d2c586487a0
 export function fetchPhoto(){
