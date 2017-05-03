@@ -27,13 +27,3 @@ test_script:
 
 # Don't actually build.
 build: off
-
-notifications:
-- provider: Email
-  to:
-  - housecor@gmail.com
-  subject: 'Build failed: react-slingshot'
-  message: The continuous integration build failed. See https://ci.appveyor.com/project/CoryHouse/react-slingshot/ for details.
-  on_build_success: false
-  on_build_failure: true
-  on_build_status_changed: false
