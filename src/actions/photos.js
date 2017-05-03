@@ -1,4 +1,4 @@
-import { FETCH_PHOTO, LOAD_MORE, SEARCH, RANDOM_IMAGE, LOADING_PHOTO } from './types.js';
+import { FETCH_PHOTO, LOAD_MORE, SEARCH, RANDOM_IMAGE, LOADING_PHOTO, FETCH_PHOTO_ERROR } from './types.js';
 import axios from 'axios';
 
 const clientId = 'bb09aa87e9f9340f1d5537f4f4c5649c1bd9c456d055b12fd76629cecceaa73a';
@@ -13,7 +13,7 @@ export function fetchPhoto(){
         dispatch({ type: FETCH_PHOTO, data: response.data });
         dispatch({ type: LOADING_PHOTO, isLoading: false });
       }).catch(error => {
-        console.error('Error:', error);
+        dispatch({ type: FETCH_PHOTO_ERROR, error});
       });
   };
 }

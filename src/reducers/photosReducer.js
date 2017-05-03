@@ -1,6 +1,8 @@
 import { FETCH_PHOTO, LOAD_MORE, SEARCH, RANDOM_IMAGE, LOADING_PHOTO } from '../actions/types';
 
-export default function (state = {isLoading: null}, action) {
+const initialState = {isLoading: null, error: null};
+
+export default function (state = initialState, action) {
   switch(action.type){
     case LOADING_PHOTO :
       return {...state, isLoading: action.isLoading};

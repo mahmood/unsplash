@@ -3,3 +3,4 @@ export const LOAD_MORE = 'LOAD_MORE';
 export const SEARCH = 'SEARCH';
 export const RANDOM_IMAGE = 'RANDOM_IMAGE';
 export const LOADING_PHOTO = 'LOADING_PHOTO';
+export const FETCH_PHOTO_ERROR = 'FETCH_PHOTO_ERROR';
