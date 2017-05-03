@@ -5,7 +5,7 @@ import {
   RANDOM_IMAGE,
   LOADING_PHOTO,
   FETCH_PHOTO_ERROR
- } from '../actions/types';
+ } from '../constants/actionTypes';
 import axios from 'axios';
 
 const clientId = 'bb09aa87e9f9340f1d5537f4f4c5649c1bd9c456d055b12fd76629cecceaa73a';

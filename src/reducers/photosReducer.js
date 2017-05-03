@@ -5,7 +5,7 @@ import {
   RANDOM_IMAGE,
   LOADING_PHOTO,
   FETCH_PHOTO_ERROR
- } from '../actions/types';
+ } from '../constants/actionTypes';
 
 const initialState = {isLoading: null, error: null};
 
