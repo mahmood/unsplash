@@ -1,4 +1,11 @@
-import { FETCH_PHOTO, LOAD_MORE, SEARCH, RANDOM_IMAGE, LOADING_PHOTO, FETCH_PHOTO_ERROR } from '../actions/types';
+import {
+  FETCH_PHOTO,
+  LOAD_MORE,
+  SEARCH,
+  RANDOM_IMAGE,
+  LOADING_PHOTO,
+  FETCH_PHOTO_ERROR
+ } from '../actions/types';
 
 const initialState = {isLoading: null, error: null};
 
