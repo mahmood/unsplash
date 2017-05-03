@@ -48,7 +48,13 @@ export class ImageList extends Component {
           {this._renderError()}
         </Grid>
         <div styleName="loadMore">
-            <Button bsSize="large" bsStyle="primary" onClick={this._handleClick}>Load More</Button>
+          <Button
+            bsStyle="primary"
+            bsSize="large"
+            disabled={this.props.isLoading}
+            onClick={!this.props.isLoading ? this._handleClick : null}>
+            {this.props.isLoading ? 'Loading...' : 'Load More'}
+          </Button>
         </div>
       </div>
     );
