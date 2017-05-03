@@ -28,13 +28,24 @@ export class ImageList extends Component {
     this.props.actions.loadMore(this.state.pageId);
   }
 
+  _renderError(){
+    if(this.props.isLoading) {
+      return <div className="error">Loading</div>;
+    }
+    if(this.props.error) {
+      return <div className="error">Error: {this.props.error}</div>;
+    }
+  }
+
   render() {
     return (
       <div>
         <Grid>
           {this.props.photo ? this.props.photo.map(item => {
             return <ImageItem key={item.id} item={item} />;
-          }) : 'Loading'}
+          }) : ''}
+
+          {this._renderError()}
         </Grid>
         <div styleName="loadMore">
             <Button bsSize="large" bsStyle="primary" onClick={this._handleClick}>Load More</Button>
@@ -50,7 +61,8 @@ ImageList.PropTypes = {
 
 const mapStateToProps = (state) => {
   return {
-    photo: state.home.photos
+    photo: state.home.photos,
+    isLoading: state.home.isLoading
   };
 };
 

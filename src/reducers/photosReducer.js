@@ -1,7 +1,9 @@
-import { FETCH_PHOTO, LOAD_MORE, SEARCH, RANDOM_IMAGE } from '../actions/types';
+import { FETCH_PHOTO, LOAD_MORE, SEARCH, RANDOM_IMAGE, LOADING_PHOTO } from '../actions/types';
 
-export default function (state = [], action) {
+export default function (state = {isLoading: null}, action) {
   switch(action.type){
+    case LOADING_PHOTO :
+      return {...state, isLoading: action.isLoading};
     case FETCH_PHOTO :
       return {...state, photos: action.data };
     case LOAD_MORE :
