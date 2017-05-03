@@ -27,7 +27,7 @@ export function loadMore(pageId = 1) {
         dispatch({ type: LOADING_PHOTO, isLoading: false });
 
       }).catch(error => {
-        console.error('Error:', error);
+        dispatch({ type: FETCH_PHOTO_ERROR, error});
       });
   };
 }
@@ -40,7 +40,7 @@ export function search(term) {
       console.log(response.data);
       dispatch({ type: SEARCH, data: response.data });
     }).catch(error => {
-      console.error(error);
+        dispatch({ type: FETCH_PHOTO_ERROR, error});
     });
   };
 }
@@ -51,7 +51,7 @@ export function getRandom() {
     .then(response => {
       dispatch({ type: RANDOM_IMAGE, data: response.data });
     }).catch(error => {
-      console.error(error);
+        dispatch({ type: FETCH_PHOTO_ERROR, error});
     });
   };
 }

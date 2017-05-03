@@ -1,4 +1,4 @@
-import { FETCH_PHOTO, LOAD_MORE, SEARCH, RANDOM_IMAGE, LOADING_PHOTO } from '../actions/types';
+import { FETCH_PHOTO, LOAD_MORE, SEARCH, RANDOM_IMAGE, LOADING_PHOTO, FETCH_PHOTO_ERROR } from '../actions/types';
 
 const initialState = {isLoading: null, error: null};
 
@@ -8,6 +8,8 @@ export default function (state = initialState, action) {
       return {...state, isLoading: action.isLoading};
     case FETCH_PHOTO :
       return {...state, photos: action.data };
+    case FETCH_PHOTO_ERROR :
+      return {...state, error: action.error };
     case LOAD_MORE :
       return {...state, photos: state.photos.concat(action.data) };
     case SEARCH :
