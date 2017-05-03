@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import CSSModules from 'react-css-modules';
 import { bindActionCreators } from 'redux';
-import { Grid, Button, ButtonToolbar } from 'react-bootstrap';
+import { Grid, Button } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import * as actions from '../../actions/photos';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import styles from './imageList.scss';
-
 import ImageItem from './imageItem.jsx';
 
 export class ImageList extends Component {

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import CSSModules from 'react-css-modules';
-import { bindActionCreators } from 'redux';
 import { Col } from 'react-bootstrap';
 import FontAwesome from 'react-fontawesome';
+import Image from 'react-image';
+import Spinner from '../Common/Spinner/Spinner.jsx';
 import styles from './imageList.scss';
 
 class ImageItem extends Component {
@@ -19,7 +20,7 @@ class ImageItem extends Component {
                 <div styleName="likeText">{likes}</div>
               </div>
             </div>
-            <img src={urls.regular}/>
+            <Image src={urls.regular} loader={ <Spinner styleName="spinner_wrap" />}/>
           </div>
           {user.name}
         </Col>

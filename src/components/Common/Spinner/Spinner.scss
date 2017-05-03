@@ -1,0 +1,18 @@
+:local {
+  .spinner {
+    width: 40px;
+    height: 40px;
+    border: solid 5px #d5d5d5;
+    display: inline-block;
+    border-radius: 50%;
+    border-top-color: red;
+    animation: 'SpinnerEffect' 1s infinite;
+    transition: all 0.3s;
+  }
+  @keyframes SpinnerEffect {
+    0%   {transform: rotate(0deg)}
+    100%   {transform: rotate(360deg)}
+  }
+}
+
+
