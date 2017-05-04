@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 import { Grid, Button } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import * as actions from '../../actions/photos';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import styles from './imageList.scss';
 import ImageItem from './imageItem.jsx';
 
@@ -60,8 +60,11 @@ export class ImageList extends Component {
   }
 }
 
-ImageList.PropTypes = {
-
+ImageList.propTypes = {
+  isLoading: PropTypes.bool,
+  photo: PropTypes.array,
+  actions: PropTypes.object,
+  error: PropTypes.string
 };
 
 const mapStateToProps = (state) => {

@@ -5,6 +5,7 @@ import FontAwesome from 'react-fontawesome';
 import Image from 'react-image';
 import Spinner from '../Common/Spinner/Spinner.jsx';
 import styles from './imageList.scss';
+import PropTypes from 'prop-types';
 
 class ImageItem extends Component {
   render() {
@@ -27,5 +28,9 @@ class ImageItem extends Component {
     );
   }
 }
+
+ImageItem.propTypes = {
+  item: PropTypes.object
+};
 
 export default CSSModules(ImageItem, styles);
