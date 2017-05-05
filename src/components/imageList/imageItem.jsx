@@ -21,7 +21,7 @@ class ImageItem extends Component {
                 <div styleName="likeText">{likes}</div>
               </div>
             </div>
-            <Image src={urls.regular} loader={ <Spinner styleName="spinner_wrap" />}/>
+            <Image src={urls.regular} loader={<Spinner />}/>
           </div>
           {user.name}
         </Col>

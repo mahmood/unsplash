@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import CSSModules from 'react-css-modules';
-import {Grid, Col, FormGroup, FormControl} from 'react-bootstrap';
+import {Grid, Col} from 'react-bootstrap';
 import {Link} from 'react-router';
 import FontAwesome from 'react-fontawesome';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import styles from './Header.scss';
 import * as actions from '../../actions/photos';
-import { debounce } from 'lodash';
 
 class Header extends Component {
   constructor(props){

@@ -2,8 +2,11 @@ import React, { Component } from 'react';
 import { Grid } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as actions from '../../actions/photos.js';
+import Image from 'react-image';
+import PropTypes from 'prop-types';
+import * as actions from '../../actions/photos';
 import Header from '../Header/Header.jsx';
+import Spinner from '../Common/Spinner/Spinner.jsx';
 
 class Random extends Component {
   componentDidMount() {
@@ -16,7 +19,7 @@ class Random extends Component {
         <Header />
         <Grid>
           {this.props.random ? '‌' : 'Loading'}
-          <img src={this.props.random ? this.props.random[0].data.urls.regular : ''} />
+          <Image src={this.props.random ? this.props.random[0].data.urls.regular : ''} loader={<Spinner />} />
         </Grid>
       </div>
     );
@@ -35,5 +38,9 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
+Random.propTypes = {
+  actions: PropTypes.object,
+  random: PropTypes.array
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Random);
