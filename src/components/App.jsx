@@ -9,13 +9,13 @@ class App extends Component {
     return (
       <section>
         <Header />
-        <Grid>
-          <Row>
-            <Col xs={12} md={12}>
-              <ImageList />
-            </Col>
-          </Row>
-      </Grid>
+          <Grid>
+            <Row>
+              <Col xs={12} md={12}>
+                <ImageList />
+              </Col>
+            </Row>
+          </Grid>
       </section>
     );
   }

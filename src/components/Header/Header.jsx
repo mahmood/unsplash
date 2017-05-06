@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import CSSModules from 'react-css-modules';
 import {Grid, Col} from 'react-bootstrap';
-import {Link} from 'react-router';
+import {Link} from 'react-router-dom';
 import FontAwesome from 'react-fontawesome';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
