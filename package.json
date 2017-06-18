@@ -1,7 +1,7 @@
 {
-  "name": "react-slingshot",
-  "version": "7.0.0",
-  "description": "Starter kit for creating apps with React and Redux",
+  "name": "react-unsplash",
+  "version": "1.0.0",
+  "description": "Simple unsplash client written with React/Redux",
   "engines": {
     "npm": ">=3"
   },
@@ -27,7 +27,7 @@
     "open:cover": "npm run test:cover && opn ./coverage/lcov-report/index.html",
     "analyze-bundle": "babel-node ./tools/analyzeBundle.js"
   },
-  "author": "Cory House",
+  "author": "Mahmood Zamani",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.16.1",
@@ -53,6 +53,9 @@
     "babel-eslint": "7.1.1",
     "babel-jest": "18.0.0",
     "babel-loader": "6.2.10",
+    "babel-plugin-syntax-decorators": "^6.13.0",
+    "babel-plugin-transform-decorators": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-plugin-transform-react-constant-elements": "6.9.1",
     "babel-plugin-transform-react-remove-prop-types": "0.2.11",
     "babel-polyfill": "6.20.0",
@@ -147,7 +150,9 @@
         ],
         "plugins": [
           "transform-react-constant-elements",
-          "transform-react-remove-prop-types"
+          "transform-react-remove-prop-types",
+          "babel-plugin-transform-decorators-legacy",
+          "babel-plugin-transform-decorators"
         ]
       },
       "test": {
