@@ -3,13 +3,13 @@ import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import configStore from './store/configureStore';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import App from './components/App.jsx';
-import Random from './components/Random/Random.jsx';
-import About from './components/About/About.jsx';
+import App from './components/App';
+import Random from './components/Random/Random';
+import About from './components/About/About';
 
 export const store = configStore();
 
-render(
+render (
   <Provider store={store}>
     <Router>
       <div>
@@ -19,4 +19,5 @@ render(
       </div>
     </Router>
   </Provider>
-  , document.querySelector('#app'));
+  , document.querySelector('#app')
+);

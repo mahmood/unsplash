@@ -3,7 +3,7 @@ import CSSModules from 'react-css-modules';
 import { Col } from 'react-bootstrap';
 import FontAwesome from 'react-fontawesome';
 import Image from 'react-image';
-import Spinner from '../Common/Spinner/Spinner.jsx';
+import Spinner from '../Common/Spinner/Spinner';
 import styles from './imageList.scss';
 import PropTypes from 'prop-types';
 

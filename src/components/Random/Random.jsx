@@ -6,7 +6,7 @@ import Image from 'react-image';
 import PropTypes from 'prop-types';
 import * as actions from '../../actions/photos';
 import Header from '../Header/Header.jsx';
-import Spinner from '../Common/Spinner/Spinner.jsx';
+import Spinner from '../Common/Spinner/Spinner';
 
 class Random extends Component {
   componentDidMount() {

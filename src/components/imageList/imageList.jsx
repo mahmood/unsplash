@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import * as actions from '../../actions/photos';
 import PropTypes from 'prop-types';
 import styles from './imageList.scss';
-import ImageItem from './imageItem.jsx';
+import ImageItem from './imageItem';
 
 export class ImageList extends Component {
   constructor(props) {

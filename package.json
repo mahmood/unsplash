@@ -189,6 +189,7 @@
       "jest": true
     },
     "rules": {
+      "import/no-unresolved": 0,
       "quotes": 0,
       "no-console": 1,
       "no-debugger": 1,
